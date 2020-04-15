@@ -17,5 +17,5 @@ struct elmlistaktor {
 struct listaktor {
     addressaktor first;
 };
-
+.
 #endif // LISTAKTRIS_H_INCLUDED
