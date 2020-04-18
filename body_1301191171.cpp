@@ -1,6 +1,6 @@
 #include "header_1301191171.h"
 
-void createNode(char X, adrNode &P) {
+void createNode(string X, adrNode &P) {
     P = new node;
     info(P) = X;
     next(P) = NULL;
@@ -21,11 +21,11 @@ void insertLast(adrNode &first, adrNode P) {
         next(Q) = P;
     }
 }
-void addNode(Graph &G, char X) {
+void addNode(Graph &G, string X, string Y) {
     adrNode P;
-    createNode(X, P);
     adrNode Q;
-    createNode(X, Q);
+    createNode(Y, Q);
+    createNode(X, P);
     //cout<<"cek1";
     if(row(G)!=NULL&&column(G)!=NULL) {
         //cout<<"cek2";
@@ -42,7 +42,7 @@ void addNode(Graph &G, char X) {
         insertLast(column(G), Q);
     }
 }
-adrNode findNode(adrNode first, char X) {
+adrNode findNode(adrNode first, string X) {
     adrNode P = first;
     if(first!=NULL) {
         while(X!=info(P)&&next(P)!=NULL) {
@@ -61,7 +61,7 @@ adrEdge alokasi(adrNode Q) {
     nextr(R) = NULL;
     return R;
 }
-void connect(Graph &G, char X, char Y) {
+void connect(Graph &G, string X, string Y) {
     if(row(G)!=NULL&&column(G)!=NULL) {
         adrNode P = findNode(row(G), X);
         adrNode Q = findNode(column(G), Y);
@@ -74,18 +74,18 @@ void printGraph(Graph G) {
         adrNode P = row(G);
         adrEdge Q;
         if(P!=NULL) {
-            cout<<info(P)<<" - ";
+            cout<<"Judul Film :"<<info(P);
             if(edge(P)!=NULL) {
                 //cout<<info(infor(edge(P)));
                 Q = edge(P);
                     if(edge(P)!=NULL) {
-                        cout<<info(infor(Q));
-                        cout<<" - ";
+                        cout<<"\nPemeran :"<<info(infor(Q));
+                        cout<<endl;
                         while(nextr(Q)!=NULL) {
                             Q = nextr(Q);
                             adrNode R = infor(Q);
                             cout<<info(R);
-                            cout<<" - ";
+                            cout<<", ";
                         }
                     }
             }
@@ -93,43 +93,20 @@ void printGraph(Graph G) {
             if(next(P)!=NULL) {
                 while(next(P)!=NULL) {
                     P = next(P);
-                    cout<<info(P)<<" - ";
+                    cout<<"Judul Film :"<<info(P);
                     Q = edge(P);
                     if(edge(P)!=NULL) {
-                        cout<<info(infor(Q));
-                        cout<<" - ";
+                        cout<<"\nPemeran :"<<info(infor(Q));
+                        cout<<endl;
                         while(nextr(Q)!=NULL) {
                             Q = nextr(Q);
                             adrNode R = infor(Q);
                             cout<<info(R);
-                            cout<<" - ";
+                            cout<<", ";
                         }
                     }
                     cout<<endl;
                 }
             }
         }
-}
-int inDegree(Graph G, char V) {
-    adrNode P = row(G);
-    int hitung = 0;
-    while(next(P)!=NULL) {
-        adrEdge R = edge(P);
-        while(nextr(R)!=NULL) {
-            if(info(infor(R))==V) {
-                hitung++;
-            }
-            R=nextr(R);
-        }
-        P=next(P);
-    }
-
-    adrEdge R = edge(P);
-        while(nextr(R)!=NULL) {
-            if(info(infor(R))==V) {
-                hitung++;
-            }
-            R=nextr(R);
-        }
-    return hitung;
 }

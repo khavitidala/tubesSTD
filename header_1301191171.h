@@ -6,10 +6,10 @@
 #define edge(P) P->edge
 #define column(G) G.column
 #define row(G) G.row
-#define infor(R) R->infor
-#define nextr(R) R->nextr
+#define infor(R) R->infor //info relasi
+#define nextr(R) R->nextr //next relasi
 using namespace std;
-typedef char infotypeNode;
+typedef string infotypeNode;
 typedef struct node *adrNode;
 typedef struct Edge *adrEdge;
 typedef adrNode infotypeEdge;
@@ -27,14 +27,13 @@ struct Graph {
     adrNode row;
 };
 
-void createNode(char X, adrNode &P);
+void createNode(string X, adrNode &P);
 void createGraph(Graph &G);
 void insertLast(adrNode &first, adrNode P);
-void addNode(Graph &G, char X);
-adrNode findNode(adrNode first, char X);
+void addNode(Graph &G, string X, string Y);
+adrNode findNode(adrNode first, string X);
 adrEdge alokasi(adrNode Q);
-void connect(Graph &G, char X, char Y);
+void connect(Graph &G, string X, string Y);
 void printGraph(Graph G);
-int inDegree(Graph G, char V);
 
 #endif // HEADER_1301191171_H_INCLUDED
