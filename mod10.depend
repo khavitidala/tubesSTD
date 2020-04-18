@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1587013863 source:/home/ryan/STD/mod10/body_1301191171.cpp
+	"header_1301191171.h"
+
+1587013555 /home/ryan/STD/mod10/header_1301191171.h
+	<iostream>
+
+1587014183 source:/home/ryan/STD/mod10/main_1301191171.cpp
+	"header_1301191171.h"
+
