@@ -8,12 +8,15 @@
 1587014183 source:/home/ryan/STD/mod10/main_1301191171.cpp
 	"header_1301191171.h"
 
-1587194238 source:/home/ryan/STD/Mod10_1301191171_IF-43-10_NMS/tubesSTD/main_1301191171.cpp
+1588044005 source:/home/ryan/STD/Mod10_1301191171_IF-43-10_NMS/tubesSTD/main_1301191171.cpp
 	"header_1301191171.h"
 
-1587194394 /home/ryan/STD/Mod10_1301191171_IF-43-10_NMS/tubesSTD/header_1301191171.h
+1588045431 /home/ryan/STD/Mod10_1301191171_IF-43-10_NMS/tubesSTD/header_1301191171.h
 	<iostream>
+	<vector>
+	<string>
+	<algorithm>
 
-1587194678 source:/home/ryan/STD/Mod10_1301191171_IF-43-10_NMS/tubesSTD/body_1301191171.cpp
+1588045989 source:/home/ryan/STD/Mod10_1301191171_IF-43-10_NMS/tubesSTD/body_1301191171.cpp
 	"header_1301191171.h"
 
