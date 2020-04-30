@@ -212,21 +212,6 @@ void seringMain(Graph G) {
   }
 }
 void filmSama(Graph G) {
-    //mainElm.push_back("tes").duaJudul;
-    //cout<<mainElm[0].duaJudul;
-    /*adrNode F1, F2;
-    F1 = row(G);
-    adrEdge P, Q;
-    P = edge(F1);
-
-    if(next(F1)!=NULL) {
-        F2 = next(row(G));
-        Q = edge(F2);
-
-        while(next(next(F1))!=NULL) {
-
-        }
-    }*/
     Graph G1;
     createGraph(G1);
     adrNode F1, F2;
